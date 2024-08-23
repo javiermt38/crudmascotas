@@ -1,0 +1,14 @@
+<%- include('template/header', {tituloWeb: 'Crear Servicio'}); %>
+<%- include('template/aside'); %>
+
+    <div class="container">
+        <h1>Nuevo Servicio</h1>
+        <form action="" method="post">
+            <input type="text" placeholder="Nombre del servicio" name="servicio" id="servicio" class="form-control my-2">
+            <input type="text" placeholder="Descripción" name="descripcion" id="descripcion" class="form-control my-2">
+            <div class="d-grid">
+                <button class="btn btn-success" type="submit">Agregar</button>
+            </div>            
+        </form>
+    </div>
+<%- include('template/footer'); %>

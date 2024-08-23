@@ -1,0 +1,71 @@
+<%- include('template/header', {tituloWeb: 'Página de Mascotas'}); %>
+<%- include('template/aside'); %>
+
+<!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Mascotas</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+              <li class="breadcrumb-item active">Mascotas</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+      <!-- Default box -->
+      <div class="card">
+        <div class="card-header">
+          <a href="mascotas/crear" class="btn btn-success">Crear Mascota</a>
+
+          <div class="card-tools">
+            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+              <i class="fas fa-minus"></i>
+            </button>
+          </div>
+
+        </div>
+        <div class="card-body">
+          <% if (arrayMascotas.length > 0) { %>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Acción</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <% arrayMascotas.forEach(mascota => { %>
+                        <tr>
+                            <th scope="row"><%= mascota.id %></th>
+                            <td><%= mascota.nombre %></td>
+                            <td><%= mascota.descripcion %></td>
+                            <td>
+                              <a href="mascotas/<%= mascota.id %>" class="btn btn-warning btn-sm">Editar</a>
+                            </td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+              </table>    
+        <% } %>
+      </div>
+        <!-- /.card-body -->
+      </div>
+      <!-- /.card -->
+    </section>
+    <!-- /.content -->
+  </div>
+   
+<%- include('template/footer'); %>

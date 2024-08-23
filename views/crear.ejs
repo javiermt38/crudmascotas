@@ -1,0 +1,14 @@
+<%- include('template/header', {tituloWeb: 'Crear Mascota'}); %>
+<%- include('template/aside'); %>
+
+    <div class="container">
+        <h1>Nueva Mascota</h1>
+        <form action="/mascotas" method="post">
+            <input type="text" placeholder="Nombre de mascota" name="nombre" id="nombre" class="form-control my-2">
+            <input type="text" placeholder="Descripción mascota" name="descripcion" id="descripcion" class="form-control my-2">
+            <div class="d-grid">
+                <button class="btn btn-success" type="submit">Agregar</button>
+            </div>            
+        </form>
+    </div>
+<%- include('template/footer'); %>
