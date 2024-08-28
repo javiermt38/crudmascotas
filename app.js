@@ -12,10 +12,10 @@ app.use(bodyParser.json())
 /* conexion a la base de datos mongodb cloud */
 const mongoose = require('mongoose');
 
-const usuario = "full_stack_6pm";
-const password = "VeKkaFOEzuitO0qy";
+const usuario = "fullStack";
+const password = "lg2qVmnjIL4LPTka";
 const dbName = "veterinaria";
-const uri = `mongodb+srv://${usuario}:${password}@cluster0.zpgqwwo.mongodb.net/${dbName}?retryWrites=true&w=majority&appName=Cluster0`;
+const uri = `mongodb+srv://${usuario}:${password}@cluster0.abyusfl.mongodb.net/${dbName}?retryWrites=true&w=majority&appName=Cluster0`;
 
 mongoose.connect(uri)
   .then(()=> console.log('conectado a MongoDB')) 
