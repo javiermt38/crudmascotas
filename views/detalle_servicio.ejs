@@ -1,5 +1,6 @@
-<%- include('template/header', {tituloWeb: 'Detalle de Mascota'}); %>
+<%- include('template/header', {tituloWeb: 'Detalles     Servicios'}); %>
 <%- include('template/aside'); %>
+
 
     <div class="container">
         <h1>Detalle de  Servicios</h1>
@@ -51,13 +52,13 @@
         btnEliminar.addEventListener('click', async() =>{
             // console.log('me diste click');
             const id = btnEliminar.dataset.id;
-            // console.log(id)
+            console.log(id)
             try {
-                const data = await fetch(`/servicio/${ id }`, {method: 'delete'});
+                const data = await fetch(`/servicios/${id}`, {method: 'delete'});
                 const respuesta = await data.json();
                 console.log(respuesta);
                 if (respuesta.estado) {
-                    window.location.href = '/servicio';
+                    window.location.href = '/servicios';
                 } else {
                     console.log(respuesta);
                 }
@@ -75,7 +76,7 @@
             let id = document.querySelector('#id').value;
             console.log(id, servicio, descripcion);
             try {
-                const data = await fetch(`/servicio/${ id }`,{
+                const data = await fetch(`/servicios/${ id }`,{
                     method:'put',
                     headers:{
                         'Content-Type': 'application/json'
@@ -85,7 +86,7 @@
                 const respuesta = await data.json();
                 // console.log(respuesta);
                 if (respuesta.estado) {
-                    window.location.href = '/servicio'
+                    window.location.href = '/servicios'
                 } else {
                     console.log(respuesta)
                 }
