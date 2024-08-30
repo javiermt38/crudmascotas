@@ -23,7 +23,7 @@ router.post("/", async (req, res)=>{
   // console.log(body);
   try {
       await Servicio.create(body)
-      res.redirect('/servicio')
+      res.redirect('/servicios')
   } catch (error) {
       console.log('error: ', error)
   }

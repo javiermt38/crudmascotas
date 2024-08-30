@@ -1,23 +1,6 @@
-.formulario{
-	background-color: var(--color2);
-	/* min utiliza el valor mas pequeño */
-	width: min(50rem, 100%);
-
-	padding: 2rem;
-	border-radius: 1rem;
-
-	margin: 0 auto;
-}
-
-.formulario fieldset{
-	border:none;	
-}
-
-.formulario legend{
-	color: var(--color1);
-	text-align: center;
-	font-size: 1.8rem;
-	text-transform: uppercase;
-	font-weight: bold;
-	margin-bottom: 2rem;
-}
+.div-con-imagen {
+	background-image: url('ruta/hacia/tu/imagen.jpg');
+	background-size: cover;
+	background-position: center;
+	align-items: center;
+  }
